@@ -24,7 +24,13 @@ module.exports = {
         items: [
           { text: 'HTML', link: '/article/web/HTML/' },
           { text: 'CSS', link: '/article/web/CSS/' },
-          { text: 'JS', link: '/article/web/JS/' },
+          {
+            text: 'JS',
+            items: [
+              { text: 'DOM', link: '/article/web/JS/DOM/' },
+              { text: 'BOM', link: '/article/web/JS/BOM/' },
+            ],
+          },
           { text: 'vue', link: '/article/web/VUE/' },
           { text: '浏览器', link: '/article/web/Browser/' },
         ],
