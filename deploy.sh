@@ -16,6 +16,6 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/FEIFEI818-LI/itway_blog_vue.git master:master
+git push -f https://github.com/FEIFEI818-LI/itway_blog_vue.git master:gh-pages
 
 cd -

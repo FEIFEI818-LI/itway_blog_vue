@@ -26,6 +26,7 @@ module.exports = {
           { text: 'CSS', link: '/article/web/CSS/' },
           { text: 'JS', link: '/article/web/JS/' },
           { text: 'vue', link: '/article/web/VUE/' },
+          { text: '浏览器', link: '/article/web/Browser/' },
         ],
       },
       {
@@ -33,10 +34,16 @@ module.exports = {
         ariaLabel: 'Language',
         items: [{ text: 'node', link: '/article/node/' }],
       },
-      { text: '收藏', link: '/tools/' },
-      { text: '个人博客', link: 'https://blog.csdn.net/m0_37903882' },
-      { text: '关于', link: '/' },
-      { text: 'GitHub', link: 'https://github.com/DuebassLei' },
+      {
+        text: '杂项',
+        ariaLabel: 'Language Menu',
+        items: [
+          { text: '技术文', link: '/article/technology/' },
+          { text: '百宝箱', link: '/tools/' },
+        ],
+      },
+      { text: '站点导航', link: '/guide/' },
+      { text: 'GitHub', link: 'https://github.com/FEIFEI818-LI' },
     ],
     sidebar: {
       // ...sideBar.createSideBar('web', ['img']),
