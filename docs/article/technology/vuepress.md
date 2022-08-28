@@ -46,3 +46,7 @@ vercel对于低流量的还是很推荐的，主要是可以白嫖！！！:grin
 
 部署，等待部署完成；部署完成后你就拥有自己的博客啦。
 
+
+
+## 改域名
+https://www.cnblogs.com/yuelblog/p/15829774.html
