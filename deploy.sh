@@ -4,7 +4,7 @@
 set -e
 
 # 生成静态文件
-npm run docs:build
+npm run build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -16,6 +16,6 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f https://gitee.com/DuebassLei/DuebassLei.git master:master
+git push -f https://github.com/FEIFEI818-LI/itway_blog_vue.git master:master
 
 cd -

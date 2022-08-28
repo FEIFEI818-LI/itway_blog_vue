@@ -1,10 +1,9 @@
 const sideBar = require('./util/autoCreateSideBar')
-console.log(sideBar.createSideBar('article', ['img']))
 
 module.exports = {
   // title: 'Itway',
   description: '像风如你',
-  base: '/',
+  base: '/itway_blog_vue/',
   // dest: './docs/.vuepress/dist',
   plugins: [
     {
