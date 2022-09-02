@@ -44,6 +44,7 @@ module.exports = {
         text: '杂项',
         ariaLabel: 'Language Menu',
         items: [
+          { text: '前端小灶', link: '/article/web/FrontQuestion/' },
           { text: '技术文', link: '/article/technology/' },
           { text: '百宝箱', link: '/tools/' },
         ],
