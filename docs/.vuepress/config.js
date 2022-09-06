@@ -29,6 +29,7 @@ module.exports = {
             items: [
               { text: 'DOM', link: '/article/web/JS/DOM/' },
               { text: 'BOM', link: '/article/web/JS/BOM/' },
+              { text: 'JS库', link: '/article/web/JS/JSLibrary/' },
             ],
           },
           { text: 'vue', link: '/article/web/VUE/' },
