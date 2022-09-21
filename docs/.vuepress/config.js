@@ -30,6 +30,7 @@ module.exports = {
               { text: 'DOM', link: '/article/web/JS/DOM/' },
               { text: 'BOM', link: '/article/web/JS/BOM/' },
               { text: 'JS库', link: '/article/web/JS/JSLibrary/' },
+              { text: "js学习", link: '/article/web/JS/JSStudy/'}
             ],
           },
           { text: 'vue', link: '/article/web/VUE/' },
