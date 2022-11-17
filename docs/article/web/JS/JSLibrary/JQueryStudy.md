@@ -6,6 +6,7 @@ title: JQuery学习和使用总结
 
 # 用法总结
 
+```javascript
 1.通过方法返回 Jquery 对象实例
 
 用 var someDiv = $(‘#someDiv").hide(); 代替 var someDiv = $(‘#someDiv"); someDiv.hide();
@@ -183,3 +184,4 @@ href : ‘somePath.html"
 });
 
 甚至是 Jquery 指定的属性或事件如 text, click
+```
