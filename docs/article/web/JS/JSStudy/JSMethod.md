@@ -1,5 +1,5 @@
 ---
-title: JS方法
+title: JS常用方法
 ---
 
 # Array 方法
