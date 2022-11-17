@@ -1,66 +1,66 @@
-const sideBar = require('./util/autoCreateSideBar')
+const sideBar = require("./util/autoCreateSideBar");
 
 module.exports = {
   // title: 'Itway',
-  description: '像风如你',
-  base: '/itway_blog_vue/',
+  description: "像风如你",
+  base: "/itway_blog_vue/",
   // dest: './docs/.vuepress/dist',
   plugins: [
     {
-      name: 'page-plugin',
-      globalUIComponents: ['fixed'],
+      name: "page-plugin",
+      globalUIComponents: ["fixed"],
     },
-    ['@vuepress/back-to-top'], // 返回顶部
-    ['@vuepress/nprogress'], // 加载进度条
+    ["@vuepress/back-to-top"], // 返回顶部
+    ["@vuepress/nprogress"], // 加载进度条
   ],
   themeConfig: {
-    logo: '/assets/img/logo.png', // logo图片
+    logo: "/assets/img/logo.png", // logo图片
     nav: [
       // 导航栏
-      { text: '主页', link: '/' },
+      { text: "主页", link: "/" },
       {
-        text: '前端',
-        ariaLabel: 'Language Menu',
+        text: "前端",
+        ariaLabel: "Language Menu",
         items: [
-          { text: 'HTML', link: '/article/web/HTML/' },
-          { text: 'CSS', link: '/article/web/CSS/' },
+          { text: "HTML", link: "/article/web/HTML/" },
+          { text: "CSS", link: "/article/web/CSS/" },
           {
-            text: 'JS',
+            text: "JS",
             items: [
-              { text: 'DOM', link: '/article/web/JS/DOM/' },
-              { text: 'BOM', link: '/article/web/JS/BOM/' },
-              { text: 'JS库', link: '/article/web/JS/JSLibrary/' },
-              { text: "js学习", link: '/article/web/JS/JSStudy/'}
+              { text: "DOM", link: "/article/web/JS/DOM/" },
+              { text: "BOM", link: "/article/web/JS/BOM/" },
+              { text: "JS库", link: "/article/web/JS/JSLibrary/" },
+              { text: "js学习", link: "/article/web/JS/JSStudy/" },
             ],
           },
-          { text: 'vue', link: '/article/web/VUE/' },
-          { text: '浏览器', link: '/article/web/Browser/' },
+          { text: "vue", link: "/article/web/VUE/" },
+          { text: "浏览器", link: "/article/web/Browser/" },
         ],
       },
       {
-        text: '后端',
-        ariaLabel: 'Language',
-        items: [{ text: 'node', link: '/article/node/' }],
+        text: "后端",
+        ariaLabel: "Language",
+        items: [{ text: "node", link: "/article/node/" }],
       },
       {
-        text: '通用',
-        items: [{ text: 'Git', link: '/article/general/Git/' }],
+        text: "通用",
+        items: [{ text: "Git", link: "/article/general/Git/" }],
       },
       {
-        text: '杂项',
-        ariaLabel: 'Language Menu',
+        text: "杂项",
+        ariaLabel: "Language Menu",
         items: [
-          { text: '前端小灶', link: '/article/web/FrontQuestion/' },
-          { text: '技术文', link: '/article/technology/' },
-          { text: '百宝箱', link: '/tools/' },
+          { text: "前端小灶", link: "/article/web/FrontQuestion/" },
+          { text: "技术文", link: "/article/technology/" },
+          { text: "百宝箱", link: "/tools/" },
         ],
       },
-      { text: '站点导航', link: '/guide/' },
-      { text: 'GitHub', link: 'https://github.com/FEIFEI818-LI' },
+      { text: "站点导航", link: "/guide/" },
+      { text: "GitHub", link: "https://github.com/FEIFEI818-LI" },
     ],
     sidebar: {
       // ...sideBar.createSideBar('web', ['img']),
-      ...sideBar.createSideBar('article', ['img']),
+      ...sideBar.createSideBar("article", ["img"]),
       // ...sideBar.createSideBar('tools', ['img']),
       // ...sideBar.createSideBar('tools', ['img']),
       // '/tools/': [
@@ -95,4 +95,4 @@ module.exports = {
     //   // ]
     // },
   },
-}
+};
