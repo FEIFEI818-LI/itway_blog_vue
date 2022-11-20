@@ -43,6 +43,11 @@ module.exports = {
         items: [{ text: "node", link: "/article/node/" }],
       },
       {
+        text: "动画",
+        ariaLabel: "Language",
+        items: [{ text: "animate", link: "/article/animate/" }],
+      },
+      {
         text: "通用",
         items: [{ text: "Git", link: "/article/general/Git/" }],
       },
