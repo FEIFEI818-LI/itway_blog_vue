@@ -43,9 +43,12 @@ module.exports = {
         items: [{ text: "node", link: "/article/node/" }],
       },
       {
-        text: "动画",
+        text: "动效和图像",
         ariaLabel: "Language",
-        items: [{ text: "animate", link: "/article/animate/" }],
+        items: [
+          { text: "canvas", link: "/article/aniImage/canvas/" },
+          { text: "animate", link: "/article/aniImage/animate/" },
+        ],
       },
       {
         text: "通用",

@@ -5,8 +5,9 @@ title: JS数据类型及方法
 # JS数据类型及方法
 
 ## JavaScript 数据类型
-- 基本数据类型：undefined，Null，boolean，string，number，symbol，这些不算对象，也没有原型，保存在栈内存中。
-- 引用类型：Object、Function、Array、Date、RegExp，保存在堆内存中，把标识（引用地址）保存在栈中。
+- 基本数据类型：undefined，null，boolean，string，number，symbol，bigint 这些不算对象，也没有原型，保存在栈内存中。
+- 引用（对象）类型：Object、Function，保存在堆内存中，把标识（引用地址）保存在栈中。
+  - 其中 Object 中又包含了很多子类型，比如 Array、RegExp、Math、Map、Set 等等。
 
 - 变量声明分为字面量创建和构造函数（实例化）创建。
   - 构造函数创建 typeof 检测数据类型都为 object。
