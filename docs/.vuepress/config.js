@@ -5,6 +5,7 @@ module.exports = {
   description: "像风如你",
   base: "/itway_blog_vue/",
   // dest: './docs/.vuepress/dist',
+  // "theme": "reco",
   plugins: [
     {
       name: "page-plugin",
@@ -15,6 +16,9 @@ module.exports = {
   ],
   themeConfig: {
     logo: "/assets/img/logo.png", // logo图片
+    // displayAllHeaders: true,
+    sidebar: "auto",
+    sidebarDepth: 2,
     nav: [
       // 导航栏
       { text: "主页", link: "/" },

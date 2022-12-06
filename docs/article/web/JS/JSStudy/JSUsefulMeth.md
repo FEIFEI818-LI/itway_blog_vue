@@ -3,6 +3,33 @@ title: JS常用方法
 ---
 
 # JS 方法
+> 项目积累的方法，方便后续使用，防止重复造轮子
+
+## 常用工具函数
+
+```javascript
+// 1.防抖函数
+function debounce(fn, delay) {
+  var delay = delay || 100;
+  let timer;
+  return function () {
+    let that = this;
+    let args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      fn.apply(that, args);
+    }, delay);
+  };
+}
+// 2.随机获取范围内数字
+function random(min, max) {
+  if (arguments.length === 2) {
+    return Math.floor(min + Math.random() * (max + 1 - min));
+  } else {
+    return null;
+  }
+}
+```
 
 ## 常用方法
 
@@ -136,31 +163,7 @@ bg.onload = function () {
 bg.src = arr[number].share_img;
 ```
 
-## 常用工具函数
 
-```javascript
-// 1.防抖函数
-function debounce(fn, delay) {
-  var delay = delay || 100;
-  let timer;
-  return function () {
-    let that = this;
-    let args = arguments;
-    clearTimeout(timer);
-    timer = setTimeout(function () {
-      fn.apply(that, args);
-    }, delay);
-  };
-}
-// 2.随机获取范围内数字
-function random(min, max) {
-  if (arguments.length === 2) {
-    return Math.floor(min + Math.random() * (max + 1 - min));
-  } else {
-    return null;
-  }
-}
-```
 
 ## JQ 方法
 
@@ -197,9 +200,9 @@ $.ajax({
 });
 ```
 
-# 常用功能实现
+## 常用功能实现
 
-## 导航栏实现
+### 导航栏实现
 
 ```html
 <!--主体-->
