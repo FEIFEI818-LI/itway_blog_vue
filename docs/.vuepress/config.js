@@ -42,6 +42,11 @@ module.exports = {
         ],
       },
       {
+        text: "移动端",
+        ariaLabel: "Language",
+        link: "/article/web/H5/", 
+      },
+      {
         text: "后端",
         ariaLabel: "Language",
         items: [{ text: "node", link: "/article/node/" }],
