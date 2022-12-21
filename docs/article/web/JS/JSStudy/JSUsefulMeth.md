@@ -323,3 +323,120 @@ function navEvent(param) {
   });
 }
 ```
+
+## jQ实现选择框
+```html
+<div id="choice_role" class="select-box">
+    <div class="selectInput">
+        <div class="choice_value" data-value="">请选择</div>
+        <span class="triangle-open"></span>
+    </div>
+    <ul id="roleList">
+        <li value="choiceRole1">这是角色名1</li>
+        <li value="choiceRole2">这是角色名2</li>
+        <li value="choiceRole3">这是角色名3</li>
+    </ul>
+</div>
+```
+```javascript
+// 选择框组件
+$(".select-box").on("click", ".choice_value", function () {
+    $(this).parents(".select-box").find("ul").toggleClass("show");
+    $(".triangle-open").toggleClass("close");
+});
+$(document).on("click", ".select-box li", function () {
+    let $this = $(this);
+    let $div = $this.parents(".select-box").find(".choice_value");
+    let selectValue = $this.attr("value");
+    $div.text($this.text());
+    $div.data("value", selectValue);
+    $this.addClass("select").siblings().removeClass("select");
+    setTimeout(function () {
+        $this.parents(".select-box").find("ul").removeClass("show");
+        $(".triangle-open").removeClass("close");
+    }, 100);
+});
+```
+```less
+// 选择框样式 
+.select-box {
+    width: 3.86rem;
+    margin: 0 auto 0;
+
+    .selectInput {
+        position: relative;
+        .wh(3.86rem, .44rem);
+        margin: 0 auto 0;
+
+        .choice_value {
+            display: block;
+            .wh(3.86rem, .44rem);
+            border: 1px solid @border-color;
+            color: @text-color;
+            margin: .8rem auto 0;
+            text-align: center;
+            font-size: .22rem;
+            line-height: .44rem;
+            position: relative;
+        }
+
+        .triangle-open {
+            position: absolute;
+            top: .2rem;
+            right: .2rem;
+            width: .4rem;
+            height: .2rem;
+            overflow: hidden;
+            pointer-events: none;
+
+            &.close {
+                top: .1rem;
+
+                &::before {
+                    transform-origin: right bottom;
+                    transform: rotate(315deg);
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: @border-color;
+                transform-origin: right top;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    ul {
+        display: none;
+        .wh(3.86rem, auto);
+        border: 1px solid @border-color;
+        color: @text-color;
+        text-align: center;
+        font-size: .22rem;
+        line-height: .44rem;
+        position: absolute;
+        // left: 50%;
+        // margin: 0 0 0 -3.86/2rem;
+
+        &.show {
+            display: block;
+        }
+
+        li {
+            background: #fff;
+            text-align: center;
+            height: .44rem;
+
+            &.select {
+                background: @border-color;
+            }
+        }
+    }
+}
+```
