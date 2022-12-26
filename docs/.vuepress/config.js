@@ -70,6 +70,7 @@ module.exports = {
           { text: "前端小灶", link: "/article/web/FrontQuestion/" },
           { text: "技术文", link: "/article/technology/" },
           { text: "百宝箱", link: "/article/tools/" },
+          { text: "npm包工具", link: "/article/npm/"}
         ],
       },
       { text: "站点导航", link: "/article/guide/" },
