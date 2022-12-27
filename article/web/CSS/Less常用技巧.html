@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Less常用技巧</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="像风如你">
+    
+    <link rel="preload" href="/itway_blog_vue/assets/css/0.styles.86b79ff2.css" as="style"><link rel="preload" href="/itway_blog_vue/assets/js/app.1a320faf.js" as="script"><link rel="preload" href="/itway_blog_vue/assets/js/2.f0733df8.js" as="script"><link rel="preload" href="/itway_blog_vue/assets/js/34.4102e909.js" as="script"><link rel="preload" href="/itway_blog_vue/assets/js/6.41d08127.js" as="script"><link rel="prefetch" href="/itway_blog_vue/assets/js/10.a995bc14.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/11.321cff59.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/12.a24102dd.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/13.d7e8fa06.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/14.bc25065f.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/15.0892e833.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/16.dea8e223.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/17.b2b59350.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/18.ebd4017c.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/19.15e2cb7e.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/20.8cdef61f.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/21.7bc8a980.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/22.2e965dc4.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/23.f3fbbea8.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/24.0cd031a6.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/25.c2da9fab.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/26.72eb3d54.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/27.888903d1.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/28.25e987dc.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/29.2ec349cf.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/3.187376da.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/30.257b5581.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/31.680ce523.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/32.f572dcf3.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/33.f639a45a.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/35.9fba9400.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/36.9fc8ca63.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/37.099db034.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/38.b129f732.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/39.239f7a4f.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/4.b2ebd934.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/40.b2cee995.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/41.3e0145e5.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/42.29fed4c1.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/43.362de231.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/44.062c052d.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/45.18eb8006.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/46.86cf7dea.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/47.f1331983.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/48.dae9c70e.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/49.17341956.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/5.5df4372e.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/50.e5f09e5d.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/51.cb1eacd7.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/52.e11a5684.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/53.d238a6bd.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/54.0e788910.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/55.041a41fb.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/56.b4b6a958.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/57.b1efa075.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/58.5a38ea87.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/59.b5c1aa61.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/60.692e7624.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/61.4765e07f.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/62.ad783e61.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/63.73ee9518.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/7.1f68e509.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/8.242649fa.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/9.f516baef.js">
+    <link rel="stylesheet" href="/itway_blog_vue/assets/css/0.styles.86b79ff2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/itway_blog_vue/" class="home-link router-link-active"><img src="/itway_blog_vue/assets/img/logo.png" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/itway_blog_vue/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/CSS/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><h4>
+          JS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/DOM/" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/BOM/" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/JSLibrary/" class="nav-link">
+  JS库
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/JSStudy/" class="nav-link">
+  js学习
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/VUE/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/Browser/" class="nav-link">
+  浏览器
+</a></li></ul></div></div><div class="nav-item"><a href="/itway_blog_vue/article/web/H5/" class="nav-link">
+  移动端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/node/" class="nav-link">
+  node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language" class="dropdown-title"><span class="title">动效和图像</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language" class="mobile-dropdown-title"><span class="title">动效和图像</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/aniImage/canvas/" class="nav-link">
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/aniImage/animate/" class="nav-link">
+  animate
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用" class="dropdown-title"><span class="title">通用</span> <span class="arrow down"></span></button> <button type="button" aria-label="通用" class="mobile-dropdown-title"><span class="title">通用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/general/Git/" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">杂项</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/FrontQuestion/" class="nav-link">
+  前端小灶
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/technology/" class="nav-link">
+  技术文
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/tools/" class="nav-link">
+  百宝箱
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/npm/" class="nav-link">
+  npm包工具
+</a></li></ul></div></div><div class="nav-item"><a href="/itway_blog_vue/article/guide/" class="nav-link">
+  站点导航
+</a></div><div class="nav-item"><a href="https://github.com/FEIFEI818-LI" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/itway_blog_vue/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/CSS/" class="nav-link router-link-active">
+  CSS
+</a></li><li class="dropdown-item"><h4>
+          JS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/DOM/" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/BOM/" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/JSLibrary/" class="nav-link">
+  JS库
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/JSStudy/" class="nav-link">
+  js学习
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/VUE/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/Browser/" class="nav-link">
+  浏览器
+</a></li></ul></div></div><div class="nav-item"><a href="/itway_blog_vue/article/web/H5/" class="nav-link">
+  移动端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/node/" class="nav-link">
+  node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language" class="dropdown-title"><span class="title">动效和图像</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language" class="mobile-dropdown-title"><span class="title">动效和图像</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/aniImage/canvas/" class="nav-link">
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/aniImage/animate/" class="nav-link">
+  animate
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用" class="dropdown-title"><span class="title">通用</span> <span class="arrow down"></span></button> <button type="button" aria-label="通用" class="mobile-dropdown-title"><span class="title">通用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/general/Git/" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">杂项</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/FrontQuestion/" class="nav-link">
+  前端小灶
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/technology/" class="nav-link">
+  技术文
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/tools/" class="nav-link">
+  百宝箱
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/npm/" class="nav-link">
+  npm包工具
+</a></li></ul></div></div><div class="nav-item"><a href="/itway_blog_vue/article/guide/" class="nav-link">
+  站点导航
+</a></div><div class="nav-item"><a href="https://github.com/FEIFEI818-LI" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CSS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/itway_blog_vue/article/web/CSS/CSS常见问题.html" class="sidebar-link">CSS常见问题及解决办法</a></li><li><a href="/itway_blog_vue/article/web/CSS/flex.html" class="sidebar-link">flex布局</a></li><li><a href="/itway_blog_vue/article/web/CSS/grid.html" class="sidebar-link">grid网格布局</a></li><li><a href="/itway_blog_vue/article/web/CSS/Less常用技巧.html" class="active sidebar-link">Less常用技巧</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/itway_blog_vue/article/web/CSS/Less常用技巧.html#布局" class="sidebar-link">布局</a></li><li class="sidebar-sub-header"><a href="/itway_blog_vue/article/web/CSS/Less常用技巧.html#图像" class="sidebar-link">图像</a></li><li class="sidebar-sub-header"><a href="/itway_blog_vue/article/web/CSS/Less常用技巧.html#文字" class="sidebar-link">文字</a></li><li class="sidebar-sub-header"><a href="/itway_blog_vue/article/web/CSS/Less常用技巧.html#滚动条" class="sidebar-link">滚动条</a></li><li class="sidebar-sub-header"><a href="/itway_blog_vue/article/web/CSS/Less常用技巧.html#动画" class="sidebar-link">动画</a></li><li class="sidebar-sub-header"><a href="/itway_blog_vue/article/web/CSS/Less常用技巧.html#功能" class="sidebar-link">功能</a></li></ul></li><li><a href="/itway_blog_vue/article/web/CSS/" aria-current="page" class="sidebar-link">css栏目</a></li><li><a href="/itway_blog_vue/article/web/CSS/伪类选择器.html" class="sidebar-link">css伪类选择器</a></li><li><a href="/itway_blog_vue/article/web/CSS/样式权重.html" class="sidebar-link">CSS样式的权重</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="布局"><a href="#布局" class="header-anchor">#</a> 布局</h2> <div class="language-LESS extra-class"><pre class="language-less"><code><span class="token selector">.wh(<span class="token variable">@w</span>: 100%, <span class="token variable">@h</span>: 100%)</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token variable">@w</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token variable">@h</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 绝对定位居中</span>
+<span class="token selector">.acenter</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 绝对定位居中（已知宽高）</span>
+<span class="token selector">.know_acenter(<span class="token variable">@w</span>, <span class="token variable">@h</span>)</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token function">-</span><span class="token punctuation">(</span><span class="token variable">@h</span><span class="token operator">/</span>2<span class="token punctuation">)</span> 0 0 <span class="token function">-</span><span class="token punctuation">(</span><span class="token variable">@w</span><span class="token operator">/</span>2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 绝对定位居中（未知宽高）, 兼容性不行</span>
+<span class="token selector">.unknow_acenter</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token operator">-</span>50%<span class="token punctuation">,</span> <span class="token operator">-</span>50%<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 弹性居中, 兼容性不行</span>
+<span class="token selector">.fcenter</span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 遮罩层, 全屏遮罩、区域遮罩</span>
+<span class="token selector">.over-screen(fixed)</span> <span class="token punctuation">{</span> <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.over-screen(absolute)</span> <span class="token punctuation">{</span> <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+
+<span class="token comment">// 扩展点击区域</span>
+<span class="token selector">.extend-click()</span> <span class="token punctuation">{</span>
+<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token selector">&amp;:before</span> <span class="token punctuation">{</span> <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span> <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> <span class="token operator">-</span>10px<span class="token punctuation">;</span> <span class="token property">left</span><span class="token punctuation">:</span> <span class="token operator">-</span>10px<span class="token punctuation">;</span> <span class="token property">right</span><span class="token punctuation">:</span> <span class="token operator">-</span>10px<span class="token punctuation">;</span> <span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token operator">-</span>10px<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="图像"><a href="#图像" class="header-anchor">#</a> 图像</h2> <div class="language-LESS extra-class"><pre class="language-less"><code><span class="token comment">// 背景图</span>
+<span class="token selector">.bgn(<span class="token variable">@url</span>, <span class="token variable">@bgsize</span>: 100% 100%, <span class="token variable">@posi</span>: center, <span class="token variable">@report</span>: no-repeat)</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>@url<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+    <span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token variable">@bgsize</span><span class="token punctuation">;</span>
+    <span class="token property">background-position</span><span class="token punctuation">:</span> <span class="token variable">@posi</span><span class="token punctuation">;</span>
+    <span class="token property">background-repeat</span><span class="token punctuation">:</span> <span class="token variable">@report</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 图片按钮</span>
+<span class="token selector">.aBtn(<span class="token variable">@url</span>, <span class="token variable">@w</span>, <span class="token variable">@h</span>, <span class="token variable">@url_hov</span>)</span> <span class="token punctuation">{</span>
+    <span class="token mixin-usage function">.bgn</span><span class="token punctuation">(</span><span class="token variable">@url</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token variable">@w</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token variable">@h</span><span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+
+    <span class="token selector">&amp;.show,&amp;:hover</span> <span class="token punctuation">{</span>
+        <span class="token function">if</span><span class="token punctuation">(</span><span class="token function">isstring</span><span class="token punctuation">(</span><span class="token variable">@url_hov</span><span class="token punctuation">)</span><span class="token punctuation">,</span> .<span class="token function">bgn</span><span class="token punctuation">(</span><span class="token variable">@url_hov</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token property">opacity</span><span class="token punctuation">:</span> .8<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="文字"><a href="#文字" class="header-anchor">#</a> 文字</h2> <div class="language-LESS extra-class"><pre class="language-less"><code><span class="token comment">// 多行文本缩略</span>
+<span class="token selector">&amp;.text-hide</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 460px<span class="token punctuation">;</span>
+    <span class="token comment">/* 设置要显示的行数只需要将 height 设为 line-height 的整数倍即可 */</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+    <span class="token comment">/* 设置文本为两端对齐 */</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> justify<span class="token punctuation">;</span>
+
+    <span class="token selector">&amp;:after</span> <span class="token punctuation">{</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token comment">/* 将省略号的大小设置为1个字体大小 */</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 4em<span class="token punctuation">;</span>
+        <span class="token property">padding</span><span class="token punctuation">:</span> 0 <span class="token operator">-</span>40px 0 0<span class="token punctuation">;</span>
+        <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'...'</span><span class="token punctuation">;</span>
+        <span class="token comment">/* 设置背景，将最后一个字覆盖掉 */</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> #211b19<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 禁止换行, 文本溢出省略号显示 (一行)</span>
+<span class="token selector">.ellipsis()</span> <span class="token punctuation">{</span>
+<span class="token property">white-space</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span> <span class="token property">word-wrap</span><span class="token punctuation">:</span> break<span class="token operator">-</span>word<span class="token punctuation">;</span> <span class="token property">word-break</span><span class="token punctuation">:</span> break<span class="token operator">-</span>all<span class="token punctuation">;</span>
+<span class="token property">-o-text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span> <span class="token property">-ms-text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span> <span class="token property">text-overflow</span><span class="token punctuation">:</span>ellipsis<span class="token punctuation">;</span> <span class="token property">overflow</span><span class="token punctuation">:</span>hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 文本溢出省略号显示 (多行)</span>
+<span class="token comment">// 只支持 webkit 浏览器, 解决方案：高度 = 行高*行数</span>
+<span class="token comment">// height: 90px; line-height: 30px; -webkit-line-clamp: 3;</span>
+<span class="token selector">.ellipsis-mult(<span class="token variable">@n</span>: 3)</span> <span class="token punctuation">{</span>
+<span class="token property">display</span><span class="token punctuation">:</span> <span class="token operator">-</span>webkit<span class="token operator">-</span>box<span class="token punctuation">;</span> <span class="token property">-webkit-box-orient</span><span class="token punctuation">:</span> vertical<span class="token punctuation">;</span><span class="token property">-webkit-line-clamp</span><span class="token punctuation">:</span> <span class="token variable">@n</span><span class="token punctuation">;</span> <span class="token property">word-break</span><span class="token punctuation">:</span> break<span class="token operator">-</span>all<span class="token punctuation">;</span>
+<span class="token property">-o-text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span> <span class="token property">-ms-text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span> <span class="token property">text-overflow</span><span class="token punctuation">:</span>ellipsis<span class="token punctuation">;</span> <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 书写模式：牌匾从右至左水平单行排版效果、文笺从右至左、从上至下排版效果</span>
+<span class="token selector">.retext(x)</span> <span class="token punctuation">{</span> <span class="token property">direction</span><span class="token punctuation">:</span> rtl<span class="token punctuation">;</span> <span class="token property">unicode-bidi</span><span class="token punctuation">:</span> bidi<span class="token operator">-</span>override<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.retext(y)</span> <span class="token punctuation">{</span> <span class="token property">writing-mode</span><span class="token punctuation">:</span> tb<span class="token operator">-</span>rl<span class="token punctuation">;</span> <span class="token property">writing-mode</span><span class="token punctuation">:</span> vertical<span class="token operator">-</span>rl<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// 文字透明</span>
+<span class="token selector">.transparent-text()</span> <span class="token punctuation">{</span> <span class="token property">font</span><span class="token punctuation">:</span> 0<span class="token operator">/</span>0 serif<span class="token punctuation">;</span> <span class="token property">text-shadow</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token property">color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// 文字外发光效果</span>
+<span class="token selector">.glow-text(<span class="token variable">@r</span>: 10px, <span class="token variable">@color</span>: gold)</span> <span class="token punctuation">{</span> <span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 0 <span class="token variable">@r</span> <span class="token variable">@color</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre></div><h2 id="滚动条"><a href="#滚动条" class="header-anchor">#</a> 滚动条</h2> <ol><li>隐藏滚动条（兼容 ie）：</li></ol> <div class="language-LESS extra-class"><pre class="language-less"><code><span class="token comment">// 隐藏滚动条</span>
+<span class="token selector">.scroll</span> <span class="token punctuation">{</span>
+    <span class="token property">overflow-y</span><span class="token punctuation">:</span> auto <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">-ms-scroll-chaining</span><span class="token punctuation">:</span> chained<span class="token punctuation">;</span>
+    <span class="token property">-ms-overflow-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">-ms-content-zooming</span><span class="token punctuation">:</span> zoom<span class="token punctuation">;</span>
+    <span class="token property">-ms-scroll-rails</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">-ms-content-zoom-limit-min</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">-ms-content-zoom-limit-max</span><span class="token punctuation">:</span> 500%<span class="token punctuation">;</span>
+    <span class="token property">-ms-scroll-snap-type</span><span class="token punctuation">:</span> proximity<span class="token punctuation">;</span>
+    <span class="token property">-ms-scroll-snap-points-x</span><span class="token punctuation">:</span> <span class="token function">snapList</span><span class="token punctuation">(</span>100%<span class="token punctuation">,</span> 200%<span class="token punctuation">,</span> 300%<span class="token punctuation">,</span> 400%<span class="token punctuation">,</span> 500%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">-ms-overflow-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+
+    <span class="token selector">&amp;::-webkit-scrollbar</span> <span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li>移动端怎么阻止滚动呢？
+得益于一个强大的 CSS 属性，设置 touch-action: none; 从而阻止了所有手势效果，自然也就不会发生页面滚动。该属性在平时的业务代码中也可用于优化移动端性能、解决 touchmove 的 passive 报错等</li></ol> <h2 id="动画"><a href="#动画" class="header-anchor">#</a> 动画</h2> <div class="language-LESS extra-class"><pre class="language-less"><code><span class="token comment">// 三维闪动 bug 处理</span>
+<span class="token selector">.transform-fix()</span> <span class="token punctuation">{</span> <span class="token property">-webkit-backface-visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token property">-webkit-transform-style</span><span class="token punctuation">:</span> preserve<span class="token operator">-</span>3d<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// 持续动画 - 淡入淡出</span>
+<span class="token selector">.ani-fade(<span class="token variable">@time</span>: 3s, <span class="token variable">@opacity</span>: 0)</span> <span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> ani<span class="token operator">-</span>fade <span class="token variable">@time</span> linear infinite<span class="token punctuation">;</span>
+
+    <span class="token atrule">@keyframes ani-fade</span> <span class="token punctuation">{</span>
+        <span class="token selector">0%</span> <span class="token punctuation">{</span>
+            <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token variable">@opacity</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector">50%</span> <span class="token punctuation">{</span>
+            <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector">100%</span> <span class="token punctuation">{</span>
+            <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token variable">@opacity</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 持续动画 - 旋转</span>
+<span class="token selector">.ani-turn(<span class="token variable">@time</span>: 30s)</span> <span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> ani<span class="token operator">-</span>turn <span class="token variable">@time</span> linear infinite<span class="token punctuation">;</span>
+
+    <span class="token atrule">@keyframes ani-turn</span> <span class="token punctuation">{</span>
+        <span class="token selector">0%</span> <span class="token punctuation">{</span>
+            <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector">100%</span> <span class="token punctuation">{</span>
+            <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>360deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 持续动画 - 大小</span>
+<span class="token selector">.ani-size(<span class="token variable">@time</span>: 2s, <span class="token variable">@size</span>: .3)</span> <span class="token punctuation">{</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> ani<span class="token operator">-</span>size <span class="token variable">@time</span> linear infinite<span class="token punctuation">;</span>
+
+    <span class="token atrule">@keyframes ani-size</span> <span class="token punctuation">{</span>
+        <span class="token selector">0%</span> <span class="token punctuation">{</span>
+            <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector">50%</span> <span class="token punctuation">{</span>
+            <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1<span class="token operator">+</span><span class="token variable">@size</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector">100%</span> <span class="token punctuation">{</span>
+            <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">// 单次动画 - 淡入</span>
+<span class="token selector">.ani-fadein(<span class="token variable">@time1</span>: .3s, <span class="token variable">@time2</span>: 0s)</span> <span class="token punctuation">{</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> ani<span class="token operator">-</span>fadein <span class="token variable">@time1</span> <span class="token variable">@time2</span> ease 1<span class="token punctuation">;</span>
+    <span class="token property">animation-fill-mode</span><span class="token punctuation">:</span> forwards<span class="token punctuation">;</span>
+
+    <span class="token atrule">@keyframes ani-fadein</span> <span class="token punctuation">{</span>
+        <span class="token selector">0%</span> <span class="token punctuation">{</span>
+            <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector">100%</span> <span class="token punctuation">{</span>
+            <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 单次动画 - 下方淡入</span>
+<span class="token selector">.ani-fadein-b(<span class="token variable">@time1</span>: .3s, <span class="token variable">@time2</span>: 0s)</span> <span class="token punctuation">{</span>
+    <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">animation</span><span class="token punctuation">:</span> ani<span class="token operator">-</span>fadein<span class="token operator">-</span>b <span class="token variable">@time1</span> <span class="token variable">@time2</span> ease 1<span class="token punctuation">;</span>
+    <span class="token property">animation-fill-mode</span><span class="token punctuation">:</span> forwards<span class="token punctuation">;</span>
+
+    <span class="token atrule">@keyframes ani-fadein-b</span> <span class="token punctuation">{</span>
+        <span class="token selector">0%</span> <span class="token punctuation">{</span>
+            <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>2rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector">100%</span> <span class="token punctuation">{</span>
+            <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+            <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="功能"><a href="#功能" class="header-anchor">#</a> 功能</h2> <div class="language-LESS extra-class"><pre class="language-less"><code><span class="token comment">// 清除浮动</span>
+<span class="token selector">.clearfix()</span> <span class="token punctuation">{</span>
+    <span class="token operator">*</span><span class="token property">zoom</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token selector">&amp;:after</span> <span class="token punctuation">{</span> <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span> <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span> <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.clearfix(table)</span> <span class="token punctuation">{</span>
+    <span class="token operator">*</span><span class="token property">zoom</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token selector">&amp;:before, &amp;:after</span> <span class="token punctuation">{</span> <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot; &quot;</span><span class="token punctuation">;</span> <span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span> <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 禁止文本被选择</span>
+<span class="token selector">.user-select()</span> <span class="token punctuation">{</span> <span class="token property">-webkit-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token property">-moz-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token property">-ms-user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token property">user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// 隐藏鼠标手势</span>
+<span class="token selector">.hide-cursor()</span> <span class="token punctuation">{</span> <span class="token property">cursor</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// 鼠标禁用样式，但仍然可以触发事件</span>
+<span class="token selector">.disabled()</span> <span class="token punctuation">{</span> <span class="token property">cursor</span><span class="token punctuation">:</span> not<span class="token operator">-</span>allowed<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// 禁用元素事件</span>
+<span class="token comment">// 1. 阻止任何点击动作的执行</span>
+<span class="token comment">// 2. 使链接显示为默认光标(cursor:default)</span>
+<span class="token comment">// 3. 阻止触发hover和active状态</span>
+<span class="token comment">// 4. 阻止JavaScript点击事件的触发</span>
+<span class="token selector">.pointer-events()</span> <span class="token punctuation">{</span> <span class="token property">pointer-events</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+
+<span class="token comment">// 用伪类来显示打印时 a 标签的链接</span>
+<span class="token selector">.print-link()</span> <span class="token punctuation">{</span>
+    <span class="token atrule">@media print</span> <span class="token punctuation">{</span>
+    <span class="token selector">a[href]:after</span> <span class="token punctuation">{</span> <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot; (&quot;</span> <span class="token function">attr</span><span class="token punctuation">(</span>href<span class="token punctuation">)</span> <span class="token string">&quot;) &quot;</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 首字下沉</span>
+<span class="token selector">.first-letter(<span class="token variable">@font-size</span>: 6em)</span> <span class="token punctuation">{</span>
+    <span class="token selector">&amp;::first-letter</span><span class="token punctuation">{</span>
+    <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token variable">@font-size</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 美化选中文本</span>
+<span class="token selector">.beauty-select()</span> <span class="token punctuation">{</span>
+    <span class="token selector">&amp;::selection</span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #6bc30d<span class="token punctuation">;</span>
+    <span class="token property">text-shadow</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">// 1 像素边框问题</span>
+<span class="token selector">.onepx(...)</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token selector">&amp;:after</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+    <span class="token property">border-top</span><span class="token punctuation">:</span> 1px solid <span class="token function">rgba</span><span class="token punctuation">(</span>7<span class="token punctuation">,</span> 17<span class="token punctuation">,</span> 27<span class="token punctuation">,</span> 0.1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.onepx(top)</span> <span class="token punctuation">{</span> <span class="token selector">&amp;:after</span> <span class="token punctuation">{</span> <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token selector">.onepx(bottom)</span> <span class="token punctuation">{</span> <span class="token selector">&amp;:after</span> <span class="token punctuation">{</span> <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+<span class="token selector">.onepx-easy(top, <span class="token variable">@color</span>: #ccc)</span> <span class="token punctuation">{</span> <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px <span class="token operator">-</span>1px 1px <span class="token operator">-</span>1px <span class="token variable">@color</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token selector">.onepx-easy(bottom, <span class="token variable">@color</span>: #ccc)</span> <span class="token punctuation">{</span> <span class="token property">box-shadow</span><span class="token punctuation">:</span> inset 0px 1px 1px <span class="token operator">-</span>1px <span class="token variable">@color</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/itway_blog_vue/article/web/CSS/grid.html" class="prev">
+        grid网格布局
+      </a></span> <span class="next"><a href="/itway_blog_vue/article/web/CSS/" class="router-link-active">
+        css栏目
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div class="fixed_container"><div class="tencent_code"><h4>关注作者公众号</h4> <p>和万千小伙伴一起学习</p></div> <div class="group_code"><h4>加入技术交流群</h4> <p>扫描二维码 备注
+      <span> 加群</span></p></div></div><!----></div></div>
+    <script src="/itway_blog_vue/assets/js/app.1a320faf.js" defer></script><script src="/itway_blog_vue/assets/js/2.f0733df8.js" defer></script><script src="/itway_blog_vue/assets/js/34.4102e909.js" defer></script><script src="/itway_blog_vue/assets/js/6.41d08127.js" defer></script>
+  </body>
+</html>

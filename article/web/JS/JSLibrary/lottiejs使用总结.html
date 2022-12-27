@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>lottiejs使用总结</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="像风如你">
+    
+    <link rel="preload" href="/itway_blog_vue/assets/css/0.styles.86b79ff2.css" as="style"><link rel="preload" href="/itway_blog_vue/assets/js/app.1a320faf.js" as="script"><link rel="preload" href="/itway_blog_vue/assets/js/2.f0733df8.js" as="script"><link rel="preload" href="/itway_blog_vue/assets/js/54.0e788910.js" as="script"><link rel="preload" href="/itway_blog_vue/assets/js/6.41d08127.js" as="script"><link rel="prefetch" href="/itway_blog_vue/assets/js/10.a995bc14.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/11.321cff59.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/12.a24102dd.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/13.d7e8fa06.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/14.bc25065f.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/15.0892e833.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/16.dea8e223.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/17.b2b59350.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/18.ebd4017c.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/19.15e2cb7e.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/20.8cdef61f.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/21.7bc8a980.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/22.2e965dc4.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/23.f3fbbea8.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/24.0cd031a6.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/25.c2da9fab.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/26.72eb3d54.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/27.888903d1.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/28.25e987dc.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/29.2ec349cf.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/3.187376da.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/30.257b5581.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/31.680ce523.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/32.f572dcf3.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/33.f639a45a.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/34.4102e909.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/35.9fba9400.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/36.9fc8ca63.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/37.099db034.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/38.b129f732.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/39.239f7a4f.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/4.b2ebd934.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/40.b2cee995.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/41.3e0145e5.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/42.29fed4c1.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/43.362de231.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/44.062c052d.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/45.18eb8006.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/46.86cf7dea.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/47.f1331983.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/48.dae9c70e.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/49.17341956.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/5.5df4372e.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/50.e5f09e5d.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/51.cb1eacd7.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/52.e11a5684.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/53.d238a6bd.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/55.041a41fb.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/56.b4b6a958.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/57.b1efa075.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/58.5a38ea87.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/59.b5c1aa61.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/60.692e7624.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/61.4765e07f.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/62.ad783e61.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/63.73ee9518.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/7.1f68e509.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/8.242649fa.js"><link rel="prefetch" href="/itway_blog_vue/assets/js/9.f516baef.js">
+    <link rel="stylesheet" href="/itway_blog_vue/assets/css/0.styles.86b79ff2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/itway_blog_vue/" class="home-link router-link-active"><img src="/itway_blog_vue/assets/img/logo.png" alt="" class="logo"> <!----></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/itway_blog_vue/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><h4>
+          JS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/DOM/" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/BOM/" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/JSLibrary/" class="nav-link router-link-active">
+  JS库
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/JSStudy/" class="nav-link">
+  js学习
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/VUE/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/Browser/" class="nav-link">
+  浏览器
+</a></li></ul></div></div><div class="nav-item"><a href="/itway_blog_vue/article/web/H5/" class="nav-link">
+  移动端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/node/" class="nav-link">
+  node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language" class="dropdown-title"><span class="title">动效和图像</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language" class="mobile-dropdown-title"><span class="title">动效和图像</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/aniImage/canvas/" class="nav-link">
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/aniImage/animate/" class="nav-link">
+  animate
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用" class="dropdown-title"><span class="title">通用</span> <span class="arrow down"></span></button> <button type="button" aria-label="通用" class="mobile-dropdown-title"><span class="title">通用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/general/Git/" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">杂项</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/FrontQuestion/" class="nav-link">
+  前端小灶
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/technology/" class="nav-link">
+  技术文
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/tools/" class="nav-link">
+  百宝箱
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/npm/" class="nav-link">
+  npm包工具
+</a></li></ul></div></div><div class="nav-item"><a href="/itway_blog_vue/article/guide/" class="nav-link">
+  站点导航
+</a></div><div class="nav-item"><a href="https://github.com/FEIFEI818-LI" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/itway_blog_vue/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><h4>
+          JS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/DOM/" class="nav-link">
+  DOM
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/BOM/" class="nav-link">
+  BOM
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/JSLibrary/" class="nav-link router-link-active">
+  JS库
+</a></li><li class="dropdown-subitem"><a href="/itway_blog_vue/article/web/JS/JSStudy/" class="nav-link">
+  js学习
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/VUE/" class="nav-link">
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/Browser/" class="nav-link">
+  浏览器
+</a></li></ul></div></div><div class="nav-item"><a href="/itway_blog_vue/article/web/H5/" class="nav-link">
+  移动端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/node/" class="nav-link">
+  node
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language" class="dropdown-title"><span class="title">动效和图像</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language" class="mobile-dropdown-title"><span class="title">动效和图像</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/aniImage/canvas/" class="nav-link">
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/aniImage/animate/" class="nav-link">
+  animate
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="通用" class="dropdown-title"><span class="title">通用</span> <span class="arrow down"></span></button> <button type="button" aria-label="通用" class="mobile-dropdown-title"><span class="title">通用</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/general/Git/" class="nav-link">
+  Git
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">杂项</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">杂项</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/web/FrontQuestion/" class="nav-link">
+  前端小灶
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/technology/" class="nav-link">
+  技术文
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/tools/" class="nav-link">
+  百宝箱
+</a></li><li class="dropdown-item"><!----> <a href="/itway_blog_vue/article/npm/" class="nav-link">
+  npm包工具
+</a></li></ul></div></div><div class="nav-item"><a href="/itway_blog_vue/article/guide/" class="nav-link">
+  站点导航
+</a></div><div class="nav-item"><a href="https://github.com/FEIFEI818-LI" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JSLibrary</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/itway_blog_vue/article/web/JS/JSLibrary/hammerjs使用总结.html" class="sidebar-link">hammer.js使用总结</a></li><li><a href="/itway_blog_vue/article/web/JS/JSLibrary/JQueryStudy.html" class="sidebar-link">JQuery学习和使用总结</a></li><li><a href="/itway_blog_vue/article/web/JS/JSLibrary/lottiejs使用总结.html" class="active sidebar-link">lottiejs使用总结</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/itway_blog_vue/article/web/JS/JSLibrary/lottiejs使用总结.html#_1-简介" class="sidebar-link">1.简介</a></li><li class="sidebar-sub-header"><a href="/itway_blog_vue/article/web/JS/JSLibrary/lottiejs使用总结.html#监听事件" class="sidebar-link">监听事件</a></li></ul></li><li><a href="/itway_blog_vue/article/web/JS/JSLibrary/" aria-current="page" class="sidebar-link">/article/web/JS/JSLibrary/</a></li><li><a href="/itway_blog_vue/article/web/JS/JSLibrary/swiper使用总结.html" class="sidebar-link">swiper.js使用总结</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="lottie-js"><a href="#lottie-js" class="header-anchor">#</a> lottie.js</h1> <blockquote><p>Lottie是一款由airbnb开源的跨平台动画渲染库，支持Android, iOS, Web, Windows平台。是专门用于解析从AE(Adobe After Effects)中通过Bodymovin插件导出的JSON文件，直接渲染动画。</p></blockquote> <h2 id="_1-简介"><a href="#_1-简介" class="header-anchor">#</a> 1.简介</h2> <p>官方文档：https://airbnb.io/lottie/#/README
+剖析 lottie-web 动画实现原理:https://juejin.cn/post/6914835547588395022
+lottie范例：https://lottiefiles.com/</p> <p><strong>例子：</strong></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>IE=edge<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Lottie<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 重点：引入Lottie JS 文件 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+      <span class="token selector">#app</span> <span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 400px<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 定义动画渲染的容器 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token comment">// loadAnimation 渲染动画</span>
+    <span class="token keyword">const</span> lottieAnimationItem <span class="token operator">=</span> lottie<span class="token punctuation">.</span><span class="token function">loadAnimation</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token comment">// 选取一个容器，用于渲染动画</span>
+      <span class="token literal-property property">container</span><span class="token operator">:</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;#app&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token comment">// 定义JSON文件路径</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">&quot;https://assets10.lottiefiles.com/packages/lf20_l3qxn9jy.json&quot;</span><span class="token punctuation">,</span>
+      <span class="token comment">// 是否循环播放</span>
+      <span class="token literal-property property">loop</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token comment">// 渲染的格式svg/canvas/html，svg性能更优，兼容性更好</span>
+      <span class="token literal-property property">renderer</span><span class="token operator">:</span> <span class="token string">&quot;svg&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><strong>loadAnimation参数配置</strong></p> <table><thead><tr><th>属性名</th> <th>描述</th></tr></thead> <tbody><tr><td>container</td> <td>渲染动画所需容器</td></tr> <tr><td>renderer</td> <td>动画渲染类型，svg/canvas/html</td></tr> <tr><td>loop</td> <td>是否循环播放，布尔值</td></tr> <tr><td>autoplay</td> <td>是否自动播放，布尔值</td></tr> <tr><td>path</td> <td>一个指定的JSON文件路径，注意这里会发起一个http请求json文件</td></tr> <tr><td>animationData</td> <td>JSON动画数据，与path属性不共存</td></tr></tbody></table> <blockquote><p>Tip：当设置path属性的时候，并不是简单的一个相对路径或者是绝对路径引入，而是lottie会发送一个http请求，访问这个json文件。如果是在vue/react项目中要注意最终的打包访问路径。</p></blockquote> <blockquote><p>考虑页面性能更优，建议使用svg渲染方式，通过path加载远程JSON文件，使用animationData会让json文件打包到JS中</p></blockquote> <p><strong>loadAnimation方法返回的对象</strong></p> <table><thead><tr><th>属性名</th> <th>类型</th> <th>描述</th></tr></thead> <tbody><tr><td>play</td> <td>() =&gt; void</td> <td>播放动画</td></tr> <tr><td>pause</td> <td>() =&gt; void</td> <td>暂停动画</td></tr> <tr><td>stop</td> <td>() =&gt; void</td> <td>停止动画</td></tr> <tr><td>setSpeed</td> <td>(number) =&gt; void</td> <td>设置播放速度</td></tr> <tr><td>destroy</td> <td>() =&gt; void</td> <td>销毁动画</td></tr></tbody></table> <ul><li><p>goToAndStop(value:number,isFrame:boolean = false)：动画跳到某个进度并停止。</p> <ul><li>value：进度数值</li> <li>isFrame：定义value是基于时间true还是基于帧false</li></ul></li> <li><p>goToAndPlay(value:number,isFrame:boolean = false)：动画跳到某个进度并播放。</p></li> <li><p>setDirection(direction:number = 1)：设置动画的播放顺序。正数和0：正序，负数：倒序</p></li> <li><p>getDuration(inFrames:boolean = false)：获取动画持续事件。</p> <ul><li>true-&gt;返回以帧为单位的持续时间</li> <li>false-&gt;返回以秒为单位的持续时间</li></ul></li> <li><p>playSegments(segments:[number,number]|[number,number][],forceFlag:boolean = false)：</p> <ul><li>segments：参数指定播放帧 [form,to]，会停留在最后一个二维数组的to里面 。</li> <li>forceFlag：参数表示是否立即强制播放该片段 。</li> <li>false-&gt;会等待当前段完成。</li> <li>true-&gt;会立即播放此段。 如：
+animation.playSegments([15,30],false); // 播放完之前的片段，播放15-30帧，
+animation.playSegments([[0,5],[10,20]]); // 直接播放0-5和10-20帧。</li></ul></li> <li><p>setSubframe(boolean = true)：false-&gt;将尊重原始的AE fps。true-&gt;将使用中间值在每个RequestAnimationFrame上更新。</p></li></ul> <h2 id="监听事件"><a href="#监听事件" class="header-anchor">#</a> 监听事件</h2> <ul><li>complete: 播放完成（循环播放下不会触发）</li> <li>loopComplete: 当前循环下播放（循环播放/非循环播放）结束时触发</li> <li>enterFrame: 每进入一帧就会触发，播放时每一帧都会触发一次，stop方法也会触发</li> <li>segmentStart: 播放指定片段时触发，playSegments、resetSegments等方法刚开始播放指定片段时会发出，如果playSegments播放多个片段，多个片段最开始都会触发。</li> <li>data_ready: 动画数据json文件加载完毕触发</li> <li>data_fail：动画数据json文件加载失败触发</li> <li>loaded_images：当所有图片加载成功/失败时触发</li> <li>DOMLoaded: 动画相关的dom已经被添加到html后触发</li> <li>destroy: 将在动画删除时触发</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// animation 是一个实例对象通过lottie.loadAnimation</span>
+animation<span class="token punctuation">.</span><span class="token function">addEventlistener</span><span class="token punctuation">(</span><span class="token string">'data_ready'</span><span class="token punctuation">,</span><span class="token parameter">res</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token comment">// handle</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'animation file has loaded'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>动画重复播放</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 监听动画完成</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>animationLottie<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'complete'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 1. 第一种 反复设置播放顺序</span>
+  <span class="token comment">// 获取到播放顺序</span>
+  <span class="token keyword">const</span> dir <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>animationLottie<span class="token punctuation">.</span>playDirection<span class="token punctuation">;</span>
+  <span class="token comment">// 设置播放顺序</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>animationLottie<span class="token punctuation">.</span><span class="token function">setDirection</span><span class="token punctuation">(</span>dir <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>animationLottie<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 2. 播放指定帧, 顺序倒过来</span>
+  <span class="token comment">// 获取到动画总时长</span>
+  <span class="token comment">// const duraction = this.animationLottie.getDuration(true);</span>
+  <span class="token comment">// this.playSegments(this.direction === 1 ? [duraction, 0] : [0, duraction]);</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/itway_blog_vue/article/web/JS/JSLibrary/JQueryStudy.html" class="prev">
+        JQuery学习和使用总结
+      </a></span> <span class="next"><a href="/itway_blog_vue/article/web/JS/JSLibrary/" class="router-link-active">
+        /article/web/JS/JSLibrary/
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div class="fixed_container"><div class="tencent_code"><h4>关注作者公众号</h4> <p>和万千小伙伴一起学习</p></div> <div class="group_code"><h4>加入技术交流群</h4> <p>扫描二维码 备注
+      <span> 加群</span></p></div></div><!----></div></div>
+    <script src="/itway_blog_vue/assets/js/app.1a320faf.js" defer></script><script src="/itway_blog_vue/assets/js/2.f0733df8.js" defer></script><script src="/itway_blog_vue/assets/js/54.0e788910.js" defer></script><script src="/itway_blog_vue/assets/js/6.41d08127.js" defer></script>
+  </body>
+</html>
