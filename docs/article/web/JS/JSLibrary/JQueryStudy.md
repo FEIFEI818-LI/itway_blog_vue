@@ -4,7 +4,8 @@ title: JQuery学习和使用总结
 
 # 学习总结
 
-# 用法总结
+## 用法总结
+
 ```javascript
 1.通过方法返回 Jquery 对象实例
 
@@ -183,4 +184,247 @@ href : ‘somePath.html"
 });
 
 甚至是 Jquery 指定的属性或事件如 text, click
+```
+
+## jQ 实现选择框
+
+```html
+<div id="choice_role" class="select-box">
+  <div class="selectInput">
+    <div class="choice_value" data-value="">请选择</div>
+    <span class="triangle-open"></span>
+  </div>
+  <ul id="roleList">
+    <li value="choiceRole1">这是角色名1</li>
+    <li value="choiceRole2">这是角色名2</li>
+    <li value="choiceRole3">这是角色名3</li>
+  </ul>
+</div>
+```
+
+```javascript
+// 选择框组件
+$(".select-box").on("click", ".choice_value", function () {
+  $(this).parents(".select-box").find("ul").toggleClass("show");
+  $(".triangle-open").toggleClass("close");
+});
+$(".select-box ul").on("click", "li", function () {
+  let $this = $(this);
+  let $div = $this.parents(".select-box").find(".choice_value");
+  let selectValue = $this.attr("value");
+  $div.text($this.text());
+  $div.data("value", selectValue);
+  $this.addClass("select").siblings().removeClass("select");
+  setTimeout(function () {
+    $this.parents(".select-box").find("ul").removeClass("show");
+    $(".triangle-open").removeClass("close");
+  }, 100);
+});
+```
+
+```less
+// 选择框样式
+.select-box {
+  width: 3.86rem;
+  margin: 0 auto 0;
+
+  .selectInput {
+    position: relative;
+    .wh(3.86rem, 0.44rem);
+    margin: 0 auto 0;
+
+    .choice_value {
+      display: block;
+      .wh(3.86rem, 0.44rem);
+      border: 1px solid @border-color;
+      color: @text-color;
+      margin: 0.8rem auto 0;
+      text-align: center;
+      font-size: 0.22rem;
+      line-height: 0.44rem;
+      position: relative;
+    }
+
+    .triangle-open {
+      position: absolute;
+      top: 0.2rem;
+      right: 0.2rem;
+      width: 0.4rem;
+      height: 0.2rem;
+      overflow: hidden;
+      pointer-events: none;
+
+      &.close {
+        top: 0.1rem;
+
+        &::before {
+          transform-origin: right bottom;
+          transform: rotate(315deg);
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: @border-color;
+        transform-origin: right top;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  ul {
+    display: none;
+    width: 3.86rem;
+    max-height: 2.5rem;
+    border: 1px solid @border-color;
+    color: @text-color;
+    text-align: center;
+    font-size: 0.22rem;
+    line-height: 0.44rem;
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &.show {
+      display: block;
+    }
+
+    li {
+      background: #fff;
+      text-align: center;
+      height: 0.44rem;
+
+      &.select {
+        background: @border-color;
+      }
+    }
+  }
+}
+```
+
+## JQ 导航栏实现
+
+```html
+<!--主体-->
+<div class="main">
+  <!--顶部导航-->
+  <div class="top-bar">
+    <div id="NIE-topBar"></div>
+  </div>
+
+  <div class="wrap">
+    <ul class="nav-box">
+      <li class="nav-item1">导航一</li>
+      <li class="nav-item2">导航二</li>
+      <li class="nav-item3">导航三</li>
+      <li class="nav-item4">导航四</li>
+      <li class="nav-item5">导航五</li>
+      <li class="nav-item6">导航六</li>
+    </ul>
+
+    <div class="kv">kv</div>
+    <!-- <div class="part-box"> -->
+    <div class="part part1">模块1</div>
+    <div class="part part2">模块2</div>
+    <div class="part part3">模块3</div>
+    <div class="part part4">模块4</div>
+    <div class="part part5">模块5</div>
+    <div class="part part6">模块6</div>
+  </div>
+  <!-- </div> -->
+</div>
+```
+
+```javascript
+/**
+ * @func
+ * @desc 导航栏事件
+ * @param {Object} param 对象参数
+ * @param {string} param.topClass 显示/隐藏导航栏的css类名
+ * @param {string} param.showClass 自定义显示/隐藏的css类名
+ * @param {string} param.navClass 导航栏盒子css类名
+ * @param {string} param.partClass 主体模块css类名
+ * @param {Array} param.part 对应模块顺序类名
+ * @example
+ * {
+        topClass: "part1",
+        showClass: "show",
+        navClass: "nav-box",
+        partClass: "part",
+        part : ["part1","part2","part3","part4","part5","part6"]
+    }
+ */
+function navEvent(param) {
+  // 添加节流阀 互斥锁
+  let flag = true;
+
+  let toggleNav;
+
+  if (param.topClass) {
+    // 如果到了主体，侧边的导航栏就显示出来
+    let tops = $(`.${param.topClass}`).offset().top;
+
+    // 页面滚动事件
+    // 如果用直接用页面滚动事件的话会出问题，因为如果当刷新页面的时候侧边按又会消失，因为只有当页面滚动的时候才会显示
+    // 所以最好的方式是封装成一个函数
+    toggleNav = function () {
+      if ($(document).scrollTop() >= tops) {
+        // 显示侧边栏
+        $(`.${param.navClass}`).fadeIn();
+      } else {
+        // 隐藏侧边栏
+        $(`.${param.navClass}`).fadeOut();
+      }
+    };
+
+    toggleNav();
+  }
+  function showNav() {
+    $(`.${param.partClass}`).each(function (index, ele) {
+      if ($(document).scrollTop() >= $(ele).offset().top) {
+        $(`.${param.navClass} li`)
+          .eq(index)
+          .addClass(param.showClass)
+          .siblings()
+          .removeClass(param.showClass);
+      }
+    });
+  }
+  $(window).scroll(function () {
+    console.log(flag);
+    toggleNav && toggleNav();
+    // 页面滚动到某个区域，左侧侧边栏li相应添加和删除show类名
+    // 加个节流阀
+    if (flag) {
+      showNav();
+    }
+  });
+  // 刷新页面侧边栏添加show类名
+  showNav();
+  // 点击侧边栏的li滚动到相应的内容区域
+  $(`.${param.navClass} li`).click(function () {
+    // 点击之后就关掉节流阀
+    flag = false;
+    var topp = $(`.${param.part[$(this).index()]}`).offset().top;
+    // 点击滚动完之后就开启节流阀
+    $("body,html")
+      .stop()
+      .animate(
+        {
+          scrollTop: topp,
+        },
+        function () {
+          flag = true;
+        }
+      );
+
+    // 点击侧边栏进行干掉其他人留下我自己
+    $(this).addClass(param.showClass).siblings().removeClass(param.showClass);
+  });
+}
 ```

@@ -3,22 +3,32 @@ title: JS常用方法
 ---
 
 # JS 方法
+
 > 项目积累的方法，方便后续使用，防止重复造轮子
 
 ## 常用工具函数
 
 ```javascript
 // 1.防抖函数
-function debounce(fn, delay) {
-  var delay = delay || 100;
-  let timer;
-  return function () {
-    let that = this;
-    let args = arguments;
-    clearTimeout(timer);
-    timer = setTimeout(function () {
-      fn.apply(that, args);
-    }, delay);
+function debounce(fn, delay, isInit = false) {
+  let timer = null;
+  //用户是否首次输入
+  let initInt = true;
+  return function (...args) {
+    // 如果用户传入了true并且是首次输入
+    if (isInit && initInt) {
+      // 如果是首次输入，则立即执行
+      fn.apply(this, args);
+      // 将立即执行变量置为false，以便进入到防抖的代码中
+      initInt = false;
+    } else {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(this, args);
+        // 将立即执行变量为true，以便下次进入到立即执行的代码里
+        initInt = true;
+      }, delay);
+    }
   };
 }
 // 2.随机获取范围内数字
@@ -163,8 +173,6 @@ bg.onload = function () {
 bg.src = arr[number].share_img;
 ```
 
-
-
 ## JQ 方法
 
 ### jq 操作表单
@@ -194,9 +202,9 @@ uploadAjax && uploadAjax.abort(); // 如果有上传请求，则挂起
 
 ```javascript
 $.ajax({
-    xhrFields:{
-        withCredentials:true
-    },
+  xhrFields: {
+    withCredentials: true,
+  },
 });
 ```
 
@@ -324,119 +332,122 @@ function navEvent(param) {
 }
 ```
 
-## jQ实现选择框
+## jQ 实现选择框
+
 ```html
 <div id="choice_role" class="select-box">
-    <div class="selectInput">
-        <div class="choice_value" data-value="">请选择</div>
-        <span class="triangle-open"></span>
-    </div>
-    <ul id="roleList">
-        <li value="choiceRole1">这是角色名1</li>
-        <li value="choiceRole2">这是角色名2</li>
-        <li value="choiceRole3">这是角色名3</li>
-    </ul>
+  <div class="selectInput">
+    <div class="choice_value" data-value="">请选择</div>
+    <span class="triangle-open"></span>
+  </div>
+  <ul id="roleList">
+    <li value="choiceRole1">这是角色名1</li>
+    <li value="choiceRole2">这是角色名2</li>
+    <li value="choiceRole3">这是角色名3</li>
+  </ul>
 </div>
 ```
+
 ```javascript
 // 选择框组件
 $(".select-box").on("click", ".choice_value", function () {
-    $(this).parents(".select-box").find("ul").toggleClass("show");
-    $(".triangle-open").toggleClass("close");
+  $(this).parents(".select-box").find("ul").toggleClass("show");
+  $(".triangle-open").toggleClass("close");
 });
 $(document).on("click", ".select-box li", function () {
-    let $this = $(this);
-    let $div = $this.parents(".select-box").find(".choice_value");
-    let selectValue = $this.attr("value");
-    $div.text($this.text());
-    $div.data("value", selectValue);
-    $this.addClass("select").siblings().removeClass("select");
-    setTimeout(function () {
-        $this.parents(".select-box").find("ul").removeClass("show");
-        $(".triangle-open").removeClass("close");
-    }, 100);
+  let $this = $(this);
+  let $div = $this.parents(".select-box").find(".choice_value");
+  let selectValue = $this.attr("value");
+  $div.text($this.text());
+  $div.data("value", selectValue);
+  $this.addClass("select").siblings().removeClass("select");
+  setTimeout(function () {
+    $this.parents(".select-box").find("ul").removeClass("show");
+    $(".triangle-open").removeClass("close");
+  }, 100);
 });
 ```
+
 ```less
-// 选择框样式 
+// 选择框样式
 .select-box {
-    width: 3.86rem;
+  width: 3.86rem;
+  margin: 0 auto 0;
+
+  .selectInput {
+    position: relative;
+    .wh(3.86rem, 0.44rem);
     margin: 0 auto 0;
 
-    .selectInput {
-        position: relative;
-        .wh(3.86rem, .44rem);
-        margin: 0 auto 0;
-
-        .choice_value {
-            display: block;
-            .wh(3.86rem, .44rem);
-            border: 1px solid @border-color;
-            color: @text-color;
-            margin: .8rem auto 0;
-            text-align: center;
-            font-size: .22rem;
-            line-height: .44rem;
-            position: relative;
-        }
-
-        .triangle-open {
-            position: absolute;
-            top: .2rem;
-            right: .2rem;
-            width: .4rem;
-            height: .2rem;
-            overflow: hidden;
-            pointer-events: none;
-
-            &.close {
-                top: .1rem;
-
-                &::before {
-                    transform-origin: right bottom;
-                    transform: rotate(315deg);
-                }
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: @border-color;
-                transform-origin: right top;
-                transform: rotate(45deg);
-            }
-        }
+    .choice_value {
+      display: block;
+      .wh(3.86rem, 0.44rem);
+      border: 1px solid @border-color;
+      color: @text-color;
+      margin: 0.8rem auto 0;
+      text-align: center;
+      font-size: 0.22rem;
+      line-height: 0.44rem;
+      position: relative;
     }
 
-    ul {
-        display: none;
-        .wh(3.86rem, auto);
-        border: 1px solid @border-color;
-        color: @text-color;
-        text-align: center;
-        font-size: .22rem;
-        line-height: .44rem;
+    .triangle-open {
+      position: absolute;
+      top: 0.2rem;
+      right: 0.2rem;
+      width: 0.4rem;
+      height: 0.2rem;
+      overflow: hidden;
+      pointer-events: none;
+
+      &.close {
+        top: 0.1rem;
+
+        &::before {
+          transform-origin: right bottom;
+          transform: rotate(315deg);
+        }
+      }
+
+      &::before {
+        content: "";
         position: absolute;
-        // left: 50%;
-        // margin: 0 0 0 -3.86/2rem;
-
-        &.show {
-            display: block;
-        }
-
-        li {
-            background: #fff;
-            text-align: center;
-            height: .44rem;
-
-            &.select {
-                background: @border-color;
-            }
-        }
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: @border-color;
+        transform-origin: right top;
+        transform: rotate(45deg);
+      }
     }
+  }
+
+  ul {
+    display: none;
+    .wh(3.86rem, auto);
+    border: 1px solid @border-color;
+    color: @text-color;
+    text-align: center;
+    font-size: 0.22rem;
+    line-height: 0.44rem;
+    position: absolute;
+    // left: 50%;
+    // margin: 0 0 0 -3.86/2rem;
+
+    &.show {
+      display: block;
+    }
+
+    li {
+      background: #fff;
+      text-align: center;
+      height: 0.44rem;
+
+      &.select {
+        background: @border-color;
+      }
+    }
+  }
 }
 ```

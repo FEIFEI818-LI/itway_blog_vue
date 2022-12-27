@@ -2,8 +2,8 @@
 title: Less常用技巧
 ---
 
-
 ## 布局
+
 ```LESS
 .wh(@w: 100%, @h: 100%) {
     width: @w;
@@ -55,6 +55,7 @@ position: relative;
 ```
 
 ## 图像
+
 ```LESS
 // 背景图
 .bgn(@url, @bgsize: 100% 100%, @posi: center, @report: no-repeat) {
@@ -78,13 +79,39 @@ position: relative;
 ```
 
 ## 文字
+
 ```LESS
+// 多行文本缩略
+&.text-hide {
+    position: relative;
+    width: 460px;
+    /* 设置要显示的行数只需要将 height 设为 line-height 的整数倍即可 */
+    height: 60px;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 设置文本为两端对齐 */
+    text-align: justify;
+
+    &:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        /* 将省略号的大小设置为1个字体大小 */
+        width: 4em;
+        padding: 0 -40px 0 0;
+        content: '...';
+        /* 设置背景，将最后一个字覆盖掉 */
+        background: #211b19;
+    }
+}
+
 // 禁止换行, 文本溢出省略号显示 (一行)
 .ellipsis() {
 white-space: normal; word-wrap: break-word; word-break: break-all;
 -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; text-overflow:ellipsis; overflow:hidden;
 }
- 
+
 // 文本溢出省略号显示 (多行)
 // 只支持 webkit 浏览器, 解决方案：高度 = 行高*行数
 // height: 90px; line-height: 30px; -webkit-line-clamp: 3;
@@ -104,7 +131,35 @@ display: -webkit-box; -webkit-box-orient: vertical;-webkit-line-clamp: @n; word-
 .glow-text(@r: 10px, @color: gold) { text-shadow: 0 0 @r @color; }
 ```
 
+## 滚动条
+
+1. 隐藏滚动条（兼容 ie）：
+
+```LESS
+// 隐藏滚动条
+.scroll {
+    overflow-y: auto !important;
+    -ms-scroll-chaining: chained;
+    -ms-overflow-style: none;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none;
+    -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+```
+
+2. 移动端怎么阻止滚动呢？
+   得益于一个强大的 CSS 属性，设置 touch-action: none; 从而阻止了所有手势效果，自然也就不会发生页面滚动。该属性在平时的业务代码中也可用于优化移动端性能、解决 touchmove 的 passive 报错等
+
 ## 动画
+
 ```LESS
 // 三维闪动 bug 处理
 .transform-fix() { -webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d; }
@@ -202,6 +257,7 @@ display: -webkit-box; -webkit-box-orient: vertical;-webkit-line-clamp: @n; word-
 ```
 
 ## 功能
+
 ```LESS
 // 清除浮动
 .clearfix() {
@@ -221,7 +277,7 @@ display: -webkit-box; -webkit-box-orient: vertical;-webkit-line-clamp: @n; word-
 
 // 鼠标禁用样式，但仍然可以触发事件
 .disabled() { cursor: not-allowed; }
- 
+
 // 禁用元素事件
 // 1. 阻止任何点击动作的执行
 // 2. 使链接显示为默认光标(cursor:default)
